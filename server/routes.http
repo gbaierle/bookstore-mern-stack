@@ -4,7 +4,7 @@ GET http://localhost:3000/books
 ###
 
 # @name get-book-by-id
-GET http://localhost:3000/books/65a54448d4828d24d792f34e
+GET http://localhost:3000/books/65a59173699c113e5c1f3914
 
 ###
 
@@ -21,7 +21,7 @@ Content-Type: application/json
 ###
 
 # @name update-book
-PUT http://localhost:3000/books/65a54448d4828d24d792f34e
+PUT http://localhost:3000/books/65a59173699c113e5c1f3914
 Content-Type: application/json
 
 {
@@ -33,4 +33,4 @@ Content-Type: application/json
 ###
 
 # @name delete-book
-DELETE http://localhost:3000/books/65a58fd0a23af6935933ffff
+DELETE http://localhost:3000/books/65a59173699c113e5c1f3914
