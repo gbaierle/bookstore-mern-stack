@@ -17,3 +17,14 @@ Content-Type: application/json
   "author": "J. K. Rowling",
   "publishYear": 2001
 }
+
+###
+
+# @name update-book
+PUT http://localhost:3000/books/65a54448d4828d24d792f34e
+Content-Type: application/json
+
+{
+  "title": "Harry Potter 1",
+  "publishYear": 2001
+}

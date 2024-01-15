@@ -57,6 +57,25 @@ app.post('/books', async (req, res) => {
   }
 });
 
+// Update book.
+app.put("/books/:id", async (req, res) => {
+  if (!req.body.title || !req.body.author || !req.body.publishYear) {
+    return res.status(400).send("Missing required fields");
+  }
+
+  try {
+    const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (!book) {
+      return res.status(404).send("Book not found");
+    }
+    res.status(200).send(book);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://localhost:27017/bookstore';
 
 mongoose
