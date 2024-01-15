@@ -26,5 +26,11 @@ Content-Type: application/json
 
 {
   "title": "Harry Potter 1",
+  "author": "J. K. Rowling",
   "publishYear": 2001
 }
+
+###
+
+# @name delete-book
+DELETE http://localhost:3000/books/65a58fd0a23af6935933ffff
