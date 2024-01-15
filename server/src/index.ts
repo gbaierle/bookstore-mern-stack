@@ -1,11 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import books from './routes/books';
+import cors from 'cors';
 
 const app = express();
 
 // Middleware to parse JSON request bodies.
 app.use(express.json());
+
+// Middleware to handle CORS.
+app.use(cors());
 
 app.get('/', (req, res) => {
   console.log(req);
